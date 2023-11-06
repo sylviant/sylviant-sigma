@@ -1,0 +1,326 @@
+*,::before, ::after{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+/*---- LE SYSTEME DE LOADER ----*/
+.loader{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.lettre{
+
+    color: #484848;
+    font-size: 80px;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 1.2s linear infinite;
+}
+@keyframes flash {
+    0%{
+        color: #d1931f;
+        text-shadow: 0 0 7px #d1931f;
+    }
+    90%{
+        color: #484848;
+        text-shadow: none;
+    }
+    100%{
+        color: #d1931f;
+        text-shadow: 0 0 7px #d1931f;
+    }
+}
+
+
+.lettre:nth-child(9){
+    animation-delay: 0.1s;
+}
+.lettre:nth-child(10){
+    animation-delay: 0.3s;
+}
+.lettre:nth-child(11){
+    animation-delay: 0.5s;
+}
+
+.fondu-out{
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+
+
+.container {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Aligner les éléments verticalement au centre */
+    position: absolute;
+    top: 10px;
+    left: 1300px;
+    gap: 30px;
+}
+/*delimiter le l'entête*/
+.delimiteur {
+    position: fixed!important; /* Le header reste en place */
+    top: 0; /* Collé en haut de la page */
+    left: -2px;
+    width: 100%;
+    z-index: 100; /* Place le header au-dessus du contenu de la page */
+    border: 0.1px  #615f5f; /* Bordure de 1 pixel solide en noir */
+    padding: 1px; /* Marge intérieure pour l'espace autour du contenu */
+    background-color: rgba(77, 76, 76, 0.5);/*Couleur de fond avec opacité (0.5 = 50%) */
+    box-shadow: 5px 5px 5px #373131 !important ;
+    transition: transform 0.3s ease; /* Ajoute une transition pour un effet de déplacement en douceur */
+    transition: top 0.3s;
+
+    
+  
+    
+    
+}
+
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(arrierePlan.png);
+    background-attachment: fixed;
+    background-size: cover;
+    
+   
+}
+.space{
+
+height: 100vh;
+
+}
+.space1{
+
+    height: 30vh;
+    
+    }
+    .space2{
+
+        height: 40vh;
+        
+        }
+    
+
+.drapeau{
+   
+    box-shadow: 3px 3px 3px #9c9c9c;
+}
+
+.sylviantlogo{
+    
+    box-shadow:3px 3px 3px #151515;
+}
+.miok1{
+text-align: center;
+font-size: 60px;
+font-family: 'Abril Fatface', serif;
+font-family: 'Bevan', serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Russo One', sans-serif;
+color: #d1931f;
+}
+.miok2{
+
+    
+    
+    width: 900px; /* Largeur du cadre */
+    height: 500px; /* Hauteur du cadre */
+    background-color: rgba(18, 37, 111, 0.5); /* Couleur de fond du cadre */
+    margin:0%; /* Centre le cadre horizontalement */
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Abril Fatface', serif;
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Bevan', serif;
+    font-family: 'Bubblegum Sans', sans-serif;
+    font-family: 'Jomhuria', serif;
+    font-family: 'Pattaya', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Russo One', sans-serif;
+    cursor: pointer; /*enrodissement des bord*/
+    border-radius: 15px 150px 15px 15px; /* taille d'arondissement des bord*/
+    box-shadow: 5px 5px 5px #191919;
+    color: #1af15e;
+}
+
+.mioklast{
+
+    background-color: #232323;
+    color: rgb(251, 243, 243);
+    padding: 10px;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center-start; 
+    justify-content: center;  
+    gap: 40px;
+}
+.fin{
+    background-color: #131313;
+    color: aliceblue;
+    padding: 5vh;
+    height: 100%;
+    width: 100%;
+    justify-content: end;
+}
+
+
+ul {
+    list-style: none; /* Supprime les puces par défaut */
+  }
+li {
+    padding-left: 20px; /* Ajoute un espace à gauche pour l'image de la puce */
+    /*background-image: url('votre-image.png'); /* Utilisez une image personnalisée comme puce */
+    background-size: 16px 16px; /* Taille de l'image de la puce */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  }
+
+
+#transimage{
+    width: 640px;
+    overflow: hidden ;
+   /* margin: 0 auto;*/
+   /* border: 1px solid #000000;*/
+    background-color: rgb(42, 142, 243, 0.5);
+   
+    
+}
+
+.animImage{
+
+    display: flex;
+    animation-duration: 30s;
+    animation-name: animaImage;
+    animation-iteration-count: infinite;
+}
+@keyframes animaImage{
+
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-640px);
+    }
+    50%{
+        transform: translateX(-1280px);
+    }
+    75%{
+        transform: translateX(-1920px);
+    }
+   100% {
+        transform: translateX(0);
+    }
+}
+
+.oko{
+    background-color: rgb(54, 139, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Cela assure que le conteneur occupe toute la hauteur de la fenêtre */
+    border-radius: 400px 0px 0px 30px;
+    margin-left: 500px;
+    box-shadow: #000 5px 5px 5px;
+  
+}
+.mi1 img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms;
+}
+.mi1:hover img{
+
+transform: scale(1.2);
+
+}
+.mi2 img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms;
+}
+.mi2:hover img{
+
+transform: scale(1.2);
+
+}
+.mi3 img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms;
+}
+.mi3:hover img{
+
+transform: scale(1.2);
+
+}
+.mi4 img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms;
+}
+.mi4:hover img{
+
+transform: scale(1.2);
+
+}
+button{
+    border: 0;
+    background: transparent;
+    color: white;
+    position: relative;
+    overflow: hidden;/*caché tous les elements qui depace*/
+    transition: all 0.2s;
+}
+
+button::after{
+    content: "";
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(225deg, #27d86c 0%, #28caf8 50%, #c625d0 100%);
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    z-index: -1;
+    transition: all 0.5s;
+
+
+    
+}
+
+button:hover::after{
+    transform: rotate(150deg);
+}
+button:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgb(143, 64, 240, .25), -10px 10px 25px 0 rgb(39, 200, 255, .25);
+
+}
